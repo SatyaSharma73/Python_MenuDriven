@@ -41,7 +41,7 @@ One line jokes for programmers (jokes as a service)
 
 See the  [documentation](http://pyjok.es/install/)  for pyjokes installation instructions.
 Documentation is available at  [https://pyjok.es/](https://pyjok.es/)
-If you recieve errors such as  No module named win32com.client,  No module named win32, or  No module named win32api, you will need to additionally install  pypiwin32.
+If you receive errors such as  No module named win32com.client,  No module named win32, or  No module named win32api, you will need to additionally install  pypiwin32.
 
 ## Usage for pyttsx3:
 
@@ -52,7 +52,7 @@ engine.runAndWait()```
 
 ## Changing Voice , Rate and Volume :
 
-```import pyttsx3
+import pyttsx3
 engine = pyttsx3.init() # object creation
 
 """ RATE"""
@@ -74,4 +74,4 @@ engine.setProperty('voice', voices[1].id)   #changing index, changes voices. 1 f
 engine.say("Hello World!")
 engine.say('My current speaking rate is ' + str(rate))
 engine.runAndWait()
-engine.stop()```
+engine.stop()
