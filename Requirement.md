@@ -44,34 +44,34 @@ Documentation is available at  [https://pyjok.es/](https://pyjok.es/)
 If you receive errors such as  No module named win32com.client,  No module named win32, or  No module named win32api, you will need to additionally install  pypiwin32.
 
 ## Usage for pyttsx3:
-
-```import pyttsx3
+``import pyttsx3
 engine = pyttsx3.init()
 engine.say("I will speak this text")
-engine.runAndWait()
-
-## Changing Voice , Rate and Volume :
-
-import pyttsx3
-engine = pyttsx3.init() # object creation
-
-""" RATE"""
-rate = engine.getProperty('rate')   # getting details of current speaking rate
-print (rate)                        #printing current voice rate
-engine.setProperty('rate', 125)     # setting up new voice rate
+engine.runAndWait()``
 
 
-"""VOLUME"""
-volume = engine.getProperty('volume')   #getting to know current volume level (min=0 and max=1)
-print (volume)                          #printing current volume level
-engine.setProperty('volume',1.0)    # setting up volume level  between 0 and 1
 
-"""VOICE"""
-voices = engine.getProperty('voices')       #getting details of current voice
-#engine.setProperty('voice', voices[0].id)  #changing index, changes voices. o for male
-engine.setProperty('voice', voices[1].id)   #changing index, changes voices. 1 for female
+## 3. Translator
 
-engine.say("Hello World!")
-engine.say('My current speaking rate is ' + str(rate))
-engine.runAndWait()
-engine.stop()
+**Libraries Requires :**
+
+ 1. gTTS
+ 2. googletrans
+
+### Installation
+
+1. Install the  ```pip install gTTS  ``` module with pip.
+2. Install the ```pip install googletrans```module with pip.
+
+# gTTS
+
+**gTTS**  (_Google Text-to-Speech_), a Python library and CLI tool to interface with Google Translate's text-to-speech API. Write spoken  `mp3`  data to a file, a file-like object (bytestring) for further audio manipulation, or  `stdout`. Or simply pre-generate Google Translate TTS request URLs to feed to an external program.  [http://gtts.readthedocs.org/](http://gtts.readthedocs.org/)
+
+## Googletrans 
+Googletrans is a  **free**  and  **unlimited**  python library that implemented Google Translate API. This uses the  [Google Translate Ajax API](https://translate.google.com/)  to make calls to such methods as detect and translate.
+
+Compatible with Python 2.7+ and 3.4+. (Note: Python 2 support will be dropped in the next major release.)
+
+For details refer to the  [API Documentation](https://py-googletrans.readthedocs.io/en/latest).
+
+
